@@ -31,17 +31,13 @@ inputEl.addEventListener("blur", (setInputLength));
 
 function setInputLength() { 
 
-    const current = inputEl.value;
+    
     const currentLength = inputEl.value.length;  //Number
     const datasetLength = parseInt(inputEl.dataset.length);
 
-//     if (currentLength === datasetLength) {
-//         inputEl.classList.toggle('valid');      
-//    } else( inputEl.classList.toggle('invalid'));
-   
     currentLength === datasetLength ?
-        inputEl.classList.toggle('valid') :
-        inputEl.classList.toggle('invalid');
+        inputEl.className = 'valid' :
+        inputEl.className = 'invalid';
     
     console.log(current);
     console.log(currentLength);
