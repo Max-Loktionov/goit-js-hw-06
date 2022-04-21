@@ -15,9 +15,9 @@ textInputEl.addEventListener("input", (blankInput));
 function blankInput (event) {
     outputEl.textContent = event.currentTarget.value;
 
+
     if (event.currentTarget.value === '') {
         outputEl.textContent = 'Anonymous'
     }
 };
-
 
