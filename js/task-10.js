@@ -79,6 +79,6 @@ console.log('Oops,I have clicked CREATE');
 
 function destroyBoxes() {
   inputControl.value = '';
-  boxesEl.remove();
+  container.innerHTML = '';
   console.log('Oops,I have  DESTROYed');
 }
