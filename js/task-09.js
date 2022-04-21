@@ -18,12 +18,12 @@
 const bodyEl = document.querySelector('body');
 const spanColorEl = document.querySelector('.color');
 const btnChangeColorEl = document.querySelector('.change-color');
-const styleEl = document.querySelector('style');
+
 
 console.log(bodyEl);
 console.log(spanColorEl);
 console.log(btnChangeColorEl);
-console.log(styleEl);
+
 
 
 btnChangeColorEl.addEventListener('click', (getChangeColor));
@@ -35,10 +35,9 @@ function getChangeColor() {
 
 
   spanColorEl.innerHTML = `${randomColor}`;
-  styleEl.insertAdjacentHTML('beforeend', `body {background-color:${randomColor}};` )
+    
+  bodyEl.style.backgroundColor = randomColor;
   
-  
-  console.log(randomColor);
   console.log('Who has clicked?')
 }
 
@@ -49,8 +48,6 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-// }
+
 
 
