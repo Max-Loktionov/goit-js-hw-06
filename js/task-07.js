@@ -14,19 +14,7 @@ const inputEl = document.querySelector('#font-size-control');
 const textSpanEl = document.querySelector('#text');
 
 // =========== change (EVENT)
-inputEl.addEventListener('change', (setInputRange));
-
-function setInputRange() {
-
-let font = textSpanEl.style.fontSize = inputEl.value+'px';
-
-console.log(font)
-};
-// ============= change end
-
-
-// ==================== input 
-// inputEl.addEventListener('input', (setInputRange));
+// inputEl.addEventListener('change', (setInputRange));
 
 // function setInputRange() {
 
@@ -34,6 +22,18 @@ console.log(font)
 
 // console.log(font)
 // };
+// ============= change end
+
+
+// ==================== input 
+inputEl.addEventListener('input', (setInputRange));
+
+function setInputRange() {
+
+let font = textSpanEl.style.fontSize = inputEl.value+'px';
+
+console.log(font)
+};
 // =================== input end
 
 console.log(inputEl);
