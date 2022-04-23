@@ -34,24 +34,26 @@ loginFormEl.addEventListener("submit", (event) => {
   } = event.currentTarget;
     
  const formData = {
-        email,
-        password
+        email:email.value,
+        password:password.value,
  } 
     console.log(formData);
 
-    const alert = document.createElement('p');
-    alert.className = 'error';
+  const alert = document.createElement('p');
+  alert.style.color = 'red';
+  
+  console.dir(alert.textContent);
   
     if (!email.value ) {
         
       const msg =  alert.textContent = `Alert! Please, fill the email`;
         console.log(msg);
-        return    email. after( alert.textContent );
+        return    email.insertAdjacentText ('afterend', msg );
         
     } else if (!password.value) {
        const msg = alert.textContent = `Alert! Please, fill the password`;
        console.log(msg); 
-       return  password. after( alert.textContent);
+       return  password. after( msg);
     } else {
         
  console.log(`Email:${email.value}, password:${password.value}`);
